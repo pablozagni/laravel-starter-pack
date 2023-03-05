@@ -17,3 +17,8 @@ To publish:
     components to \resources\views\components
     layouts to \resources\views\layouts
     css to \resources\css
+
+Edit your \resources\css\app.css and add
+
+    @import 'laravel-starter-pack.css';
+
