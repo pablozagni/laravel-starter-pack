@@ -27,8 +27,6 @@
         
         <div class="bg-gray-100">
             {{ $navbar }}
-            <x-jet-banner />
-
             <main>
                 @if(session()->has('info'))
                     <x-alert type="info">{{ session('info') }}</x-alert>
