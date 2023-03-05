@@ -1,0 +1,38 @@
+{
+    "name": "pablozagni/laravel-starter-pack",
+    "description": "Set of custom blade components, css and layouts",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "laravel components",
+        "blade",
+        "blade components"
+    ],
+    "require": {
+        "php": "^7.0||^8.0.",
+        "laravel/framework": "^7.0|^8.83|^9.16|^10.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pablozagni\\LaravelStarterPack\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pablozagni\\LaravelStarterPack\\Providers\\LaravelStarterPackServiceProvider"
+            ]
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pablo Zagni",
+            "email": "pablozagni@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
