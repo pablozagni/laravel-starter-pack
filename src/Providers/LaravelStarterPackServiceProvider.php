@@ -22,6 +22,7 @@ class LaravelStarterPackServiceProvider extends ServiceProvider
             __DIR__ . '/../../resources/views' => resource_path('views'),
             __DIR__ . '/../../resources/css' => resource_path('css'),
             __DIR__ . '/../../app/View/Components' => app_path('View/Components'),
+            __DIR__ . '/../../lang' => main_path('lang'),
         ], 'LaravelStarterPack');
 
     }
