@@ -2,12 +2,7 @@
 
 Set of custom Laravel Blade components, CSS and layouts.
 
-
 Usage:
-
-laravel new myapp
-
-cd myapp
 
 composer require pablozagni/laravel-starter-pack:dev-master
 
