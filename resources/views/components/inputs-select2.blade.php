@@ -2,15 +2,22 @@
     'label',
     'name',
     'value',
+    'multiple' => false,
     'options' => [],
 ])
 <div class="md:grid sm:grid-cols-1 md:grid-cols-3 mb-3">
     <x-inputs-label>{{ $label }}</x-inputs-label>
     <div class="w-full md:col-span-2">
+
         <div
             x-data="{
-                multiple: false,
-                value: '{{ $value }}',
+                @if( $multiple )
+                    multiple: true,
+                    value: [ @foreach ($value as $val) '{{ $val->id }}', @endforeach ],
+                @else
+                    multiple: false,
+                    value: '{{ $value }}',
+                @endif
                 options: [
                     @foreach ($options as $key=>$op)
                         { value: {{ $key }}, label: '{{ $op }}' },
@@ -53,9 +60,13 @@
         >
             <select 
                 x-ref="select" 
-                {{ $attributes->merge(['class'=>'w-full form-control'])}}
+                {{ $attributes->merge(['class'=>'w-full'])}}
                 @if (isset($name)) name="{{ $name }}" @endif
                 ></select>
+
         </div>
+
+
+        
     </div>
 </div>
